@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  komiser-staging:
+    container_name: komiser-staging
+    image: mlabouardy/komiser:latest
+    environment:
+      - AWS_ACCESS_KEY=AKIXXXXXXXXXXXX
+      - AWS_SECRET_KEY=KUcDkXXXXXXXXXXXXXXXXX9kAZ53Yq
+      - AWS_REGION=eu-west-1
+    ports:
+      - "3001:3000"
+  komiser-prod:
+    container_name: komiser-prod
+    image: mlabouardy/komiser:latest
+    environment:
+      - AWS_ACCESS_KEY=AKIXXXXXXXXXXXXA
+      - AWS_SECRET_KEY=KI/uJmXXXXXXXXXXXXXXXXzM+R+zqC
+      - AWS_REGION=eu-west-1
+    ports:
+      - "3003:3000"
